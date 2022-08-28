@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "singularName": "education",
+    "pluralName": "educations",
+    "displayName": "education",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "School": {
+      "type": "string",
+      "required": true
+    },
+    "graduationDate": {
+      "type": "date",
+      "required": true
+    },
+    "b_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::b-user.b-user",
+      "mappedBy": "education"
+    }
+  }
+}

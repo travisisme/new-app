@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "b_users",
+  "info": {
+    "singularName": "b-user",
+    "pluralName": "b-users",
+    "displayName": "b-user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string",
+      "required": true
+    },
+    "Surname": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "education": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::education.education",
+      "inversedBy": "b_user"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "b_users"
+    }
+  }
+}

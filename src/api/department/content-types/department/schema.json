@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departments",
+  "info": {
+    "singularName": "department",
+    "pluralName": "departments",
+    "displayName": "Department"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "departmentName": {
+      "type": "string",
+      "required": true
+    },
+    "b_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::b-user.b-user",
+      "mappedBy": "department"
+    }
+  }
+}
